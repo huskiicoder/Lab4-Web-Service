@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "TCSS 450 Lab for creating a webservice",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfb3/tcss-450-web-service-starter"
+  },
   "scripts": {
     "test": "index.js"
   },
