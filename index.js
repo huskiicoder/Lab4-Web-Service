@@ -3,14 +3,8 @@ const express = require('express')
 //Create a new instance of express
 const app = express()
 
-//Obtain a Pool of DB connections. 
-const { Pool } = require('pg')
-const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-        rejectUnauthorized: false,
-    }
-})
+//Access the connection to Heroku Database
+const pool = require('../utilities').pool
 
 let middleware = require('./middleware')
 
