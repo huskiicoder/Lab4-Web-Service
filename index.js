@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 
 //Access the connection to Heroku Database
-const pool = require('../utilities').pool
+const pool = require('./utilities').pool
 
 let middleware = require('./middleware')
 
