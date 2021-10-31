@@ -20,6 +20,17 @@ app.use(express.json())
 app.use(middleware.jsonErrorInBody)
 
 
+// Lab 4 get and post 
+app.get("/hello", (request, response) => {
+    response.send({
+        message: "Hello, you sent a GET request"
+    })
+})
+app.post("/hello", (reqeust, response) => {
+    response.send({
+        message: "Hello, you sent a POST request"
+    })
+})
 
 
 /*
