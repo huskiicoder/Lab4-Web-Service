@@ -69,8 +69,6 @@ app.post("/params", (request, response) => {
     }
 })*/
 
-
-
 app.get("/wait", (request, response) => {
     setTimeout(() => {
         response.send({
@@ -80,7 +78,7 @@ app.get("/wait", (request, response) => {
 })
 
 // Lab 4 step 68
-app.post("/demosql", (request, response) => {
+/*app.post("/demosql", (request, response) => {
     if (isStringProvided(request.body.name) && isStringProvided(request.body.message)) 
 {
         const theQuery = "INSERT INTO DEMO(Name, Message) VALUES ($1, $2) RETURNING *"
@@ -138,7 +136,10 @@ app.get("/demosql", (request, response) => {
                             message: err.detail
                         })
                     })
-            })
+            })*/
+
+// Lab 4 step 111 (replacing the above to use demosql.js)
+app.use('/demosql', require('./routes/demosql.js'))
 
 /*
  * Return HTML for the / end point. 
