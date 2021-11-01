@@ -23,9 +23,11 @@ app.use(express.json())
  */
 app.use(middleware.jsonErrorInBody)
 
+// Lab 4 line 101 (replacing params functions below with this)
+app.use('/params', require('./routes/params.js'))
 
 // Lab 4 get and post 
-app.get("/hello", (request, response) => {
+/*app.get("/hello", (request, response) => {
     response.send({
         message: "Hello, you sent a GET request"
     })
@@ -34,10 +36,13 @@ app.post("/hello", (reqeust, response) => {
     response.send({
         message: "Hello, you sent a POST request"
     })
-})
+})*/
+
+// Lab 4 line 93 (replaces get and post functions above)
+app.use('/hello', require('./routes/hello.js'))
 
 // Lab 4 step 48
-app.get("/params", (request, response) => {
+/*app.get("/params", (request, response) => {
     if (isStringProvided(request.query.name)) {
         response.send({
             //req.query is a reference to arguments a
@@ -62,7 +67,10 @@ app.post("/params", (request, response) => {
             message: "Missing required information"
         })
     }
-})
+})*/
+
+
+
 app.get("/wait", (request, response) => {
     setTimeout(() => {
         response.send({
