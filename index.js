@@ -39,7 +39,7 @@ app.post("/hello", (reqeust, response) => {
 })*/
 
 // Lab 4 line 93 (replaces get and post functions above)
-app.use('/hello', require('./routes/hello.js'))
+//app.use('/hello', require('./routes/hello.js'))
 
 // Lab 4 step 48
 /*app.get("/params", (request, response) => {
