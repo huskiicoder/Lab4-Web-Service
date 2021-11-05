@@ -144,6 +144,9 @@ app.use('/demosql', require('./routes/demosql.js'))
 // Lab 4 step 118
 app.use('/auth', require('./routes/register.js'))
 
+// Lab 4 step 137
+app.use('/auth', require('./routes/signin.js'))
+
 /*
  * Return HTML for the / end point. 
  * This is a nice location to document your web service API
