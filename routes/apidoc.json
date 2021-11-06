@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "The TCSS 450 Lab Web Service API Documentation",
     "title": "Lab API Doc",
-    "url" : "https://aalmemar-tcss450-labs.herokuapp.com",
+    "url" : "https://aalmemar-tcss450-labs.herokuapp.com/doc",
     "order": [
       "Hello",
       "Params",
