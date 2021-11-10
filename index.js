@@ -150,6 +150,15 @@ app.use('/auth', require('./routes/signin.js'))
 // Lab 4 step 158
 app.use('/phish', middleware.checkToken, require('./routes/phish.js'))
 
+// Lab 5 step 38
+app.use('/messages', middleware.checkToken, require('./routes/messages.js'))
+
+// Lab 5 step 41
+app.use('/chats', middleware.checkToken, require('./routes/chats.js'))
+
+// Lab 5 step 47
+app.use('/auth', middleware.checkToken, require('./routes/pushyregister.js'))
+
 /*
  * Return HTML for the / end point. 
  * This is a nice location to document your web service API
